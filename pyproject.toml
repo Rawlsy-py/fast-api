@@ -10,6 +10,8 @@ packages = [{include = "fast_api"}]
 python = "^3.11"
 fastapi = "^0.109.0"
 uvicorn = "^0.26.0"
+polars = "^0.20.5"
+pokebase = "^1.4.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.4"
