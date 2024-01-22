@@ -19,3 +19,5 @@ def get_pokemon(name: str) -> Union[Dict[str, Any], str]:
 
 # Example usage:
 print(get_pokemon("pikachu"))
+
+print(get_pokemon("charmander"))
