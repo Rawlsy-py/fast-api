@@ -1,5 +1,6 @@
 import requests
 from typing import Union, Dict, Any
+from fastapi import FastAPI
 
 
 def get_pokemon(name: str) -> Union[Dict[str, Any], str]:
@@ -17,7 +18,10 @@ def get_pokemon(name: str) -> Union[Dict[str, Any], str]:
         return f"Something went wrong: {err}"
 
 
-# Example usage:
-print(get_pokemon("pikachu"))
+app = FastAPI()
 
-print(get_pokemon("charmander"))
+
+@app.get("/")
+def read_root():
+    data = get_pokemon("pikachu")
+    return data
